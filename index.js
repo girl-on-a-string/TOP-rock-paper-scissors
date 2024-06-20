@@ -23,11 +23,10 @@ function getComputerChoice () {
 }
 
 function getHumanChoice () {
-    // get one of the valid choices
-    //use prompt
-
-    let ans = prompt('Choose "Rock", "Paper", or "Scissors"').toLowerCase;
-    return ans;
+    
+    let ans = prompt('Choose "Rock", "Paper", or "Scissors"');
+    humanChoice = ans.toLowerCase();
+    return humanChoice;
 }
 
 function playRound (humanChoice, computerChoice) {
@@ -36,12 +35,16 @@ function playRound (humanChoice, computerChoice) {
 
         if (humanChoice == "paper") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore++} points vs the computer's ${computerScore--} points!`);
+            humanScore++;
+            computerScore--;
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
 
         } else if (humanChoice == "scissors") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore--} points vs the computer's ${computerScore++} points!`);
+            humanScore--;
+            computerScore++;
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         } else {
 
@@ -53,11 +56,15 @@ function playRound (humanChoice, computerChoice) {
 
         if (humanChoice == "rock") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore--} points vs the computer's ${computerScore++} points!`);
+            humanScore--;
+            computerScore++;
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         } else if (humanChoice == "scissors") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore++} points vs the computer's ${computerScore--} points!`);
+            humanScore++;
+            computerScore--;
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         } else {
 
@@ -69,11 +76,15 @@ function playRound (humanChoice, computerChoice) {
 
         if (humanChoice == "rock") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore++} points vs the computer's ${computerScore--} points!`);
+            humanScore++
+            computerScore--;
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         } else if (humanChoice == "paper") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore--} points vs the computer's ${computerScore++} points!`);
+            humanScore--;
+            computerScore++;
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         } else {
 
