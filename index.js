@@ -1,3 +1,10 @@
+
+let humanScore = 0;
+let computerScore = 0;
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
 function getComputerChoice () {
     // return rock paper or scissors
     // use math random
@@ -23,24 +30,22 @@ function getHumanChoice () {
     return ans;
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound (humanChoice, computerChoice) {
  
     if (computerChoice == "rock") {
 
         if (humanChoice == "paper") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore++} points vs the computer's ${computerScore--} points!`);
+
 
         } else if (humanChoice == "scissors") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore--} points vs the computer's ${computerScore++} points!`);
 
         } else {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. It's a tie!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. It's a tie! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         }
 
@@ -48,15 +53,15 @@ function playRound (humanChoice, computerChoice) {
 
         if (humanChoice == "rock") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore--} points vs the computer's ${computerScore++} points!`);
 
         } else if (humanChoice == "scissors") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore++} points vs the computer's ${computerScore--} points!`);
 
         } else {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. It's a tie!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. It's a tie! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         }
 
@@ -64,22 +69,21 @@ function playRound (humanChoice, computerChoice) {
 
         if (humanChoice == "rock") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You win! You now have ${humanScore++} points vs the computer's ${computerScore--} points!`);
 
         } else if (humanChoice == "paper") {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. You lose! You now have ${humanScore--} points vs the computer's ${computerScore++} points!`);
 
         } else {
 
-            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. It's a tie!`);
+            alert(`Computer chose ${computerChoice}, you chose ${humanChoice}. It's a tie! You now have ${humanScore} points vs the computer's ${computerScore} points!`);
 
         }
 
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+// play three rounds
 
-playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection) * 3;
