@@ -2,9 +2,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 function getComputerChoice () {
     // return rock paper or scissors
     // use math random
@@ -100,7 +97,7 @@ function playRound (humanChoice, computerChoice) {
 function playGame () {
     for (let i = 0; i <= 5; i++) {
 
-        playRound(humanSelection, computerSelection);
+        playRound(getHumanChoice(), getComputerChoice());
 
     }
 
@@ -108,6 +105,10 @@ function playGame () {
 
         let winVal = humanScore - computerScore;
         alert(`Congrats! You won the game by ${loseVal}! You had ${humanScore} points and the computer had ${computerScore} points.`);
+
+    } else if (humanScore == computerScore) {
+
+        alert(`Oh no! It's a tie! You and the computer both have ${humanScore} points!`)
 
     } else {
 
