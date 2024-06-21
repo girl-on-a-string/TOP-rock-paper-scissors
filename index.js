@@ -66,20 +66,20 @@ function playRound (humanChoice, computerChoice) {
 
 // play 5 rounds 
 
-function playGame () {
-    for (let i = 0; i <= 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
-    
-    if (humanScore > computerScore) {
-        let winVal = humanScore - computerScore;
-        alert(`Congrats! You won the game by ${loseVal}! You had ${humanScore} points and the computer had ${computerScore} points.`);
-    } else if (humanScore == computerScore) {
-        alert(`Oh no! It's a tie! You and the computer both have ${humanScore} points!`)
-    } else {
-        let loseVal = computerScore - humanScore;
-        alert(`Oh no! You lost the game by ${loseVal} points! You had ${humanScore} points and the computer had ${computerScore} points.`);
-    }
-}
+// function playGame () {
+//     for (let i = 0; i <= 5; i++) {
+//         playRound(getHumanChoice(), getComputerChoice());
+//     }
 
-playGame();
+//     if (humanScore > computerScore) {
+//         let winVal = humanScore - computerScore;
+//         alert(`Congrats! You won the game by ${loseVal}! You had ${humanScore} points and the computer had ${computerScore} points.`);
+//     } else if (humanScore == computerScore) {
+//         alert(`Oh no! It's a tie! You and the computer both have ${humanScore} points!`)
+//     } else {
+//         let loseVal = computerScore - humanScore;
+//         alert(`Oh no! You lost the game by ${loseVal} points! You had ${humanScore} points and the computer had ${computerScore} points.`);
+//     }
+// }
+
+// playGame();
