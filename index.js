@@ -95,6 +95,26 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-// play three rounds
+// play 5 rounds 
 
-playRound(humanSelection, computerSelection) * 3;
+function playGame () {
+    for (let i = 0; i <= 5; i++) {
+
+        playRound(humanSelection, computerSelection);
+
+    }
+
+    if (humanScore > computerScore) {
+
+        let winVal = humanScore - computerScore;
+        alert(`Congrats! You won the game by ${loseVal}! You had ${humanScore} points and the computer had ${computerScore} points.`);
+
+    } else {
+
+        let loseVal = computerScore - humanScore;
+        alert(`Oh no! You lost the game by ${loseVal} points! You had ${humanScore} points and the computer had ${computerScore} points.`);
+
+    }
+}
+
+playGame();
