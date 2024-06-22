@@ -1,0 +1,84 @@
+:root {
+    --bgColor: #abf0a3; 
+    --uiBgColor: #2a5c25;
+    --uiFgColor: #3b9c30;
+    --backHighlightColor: #86c44d;
+    --contFont: #cfcc40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    background-color: var(--bgColor);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#all {
+    background-color: var(--uiBgColor);
+    border-radius: 20px;
+    width: 20%;
+    padding: 10px;
+}
+
+/* multiples */
+
+header, #scoreboard, #choice-lineup, #choice-lineup button {
+    border-radius: 10px;
+}
+
+header, #choice-lineup, #scoreboard {
+    background-color: var(--uiFgColor);
+    margin: 20px;
+}
+
+#choice-lineup, #choice-lineup button, #scoreboard, header {
+    padding: 10px;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Main */
+
+#choice-lineup {
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+#choice-lineup button {
+    background-color: var(--backHighlightColor);
+    border: none;
+    font-size: 100px;
+    width: 100%;
+}
+
+#scoreboard {
+    justify-content: space-around;
+}
+
+/* Footer */
+
+footer { 
+    text-align: center;
+    padding-bottom: 10px;
+}

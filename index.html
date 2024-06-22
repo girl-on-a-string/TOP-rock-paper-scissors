@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="flex">
     <div id="all">
         <header>
             <h1>Rock Paper Scissors</h1>
-            <h2>Play a game against the computer by selecting your choice. Each game is 5 rounds, watch your score go up and down below! You start: </h2>
+            <h2>Play a game against the computer by selecting your choice. The game ends when one player earns five points. You start: </h2>
         </header>
         <main>
             <div id="ui">
-                <div id="choice-lineup">
-                    <span id="rock">🪨</span>
-                    <span id="paper">📰</span>
-                    <span id="scissors">✂️</span>
+                <div id="choice-lineup" class="flex">
+                    <button id="rock">🪨</button>
+                    <button id="paper">📰</button>
+                    <button id="scissors">✂️</button>
                 </div>
-                <div id="scoreboard">
+                <div id="scoreboard" class="flex">
                     <div id="computer-score">
                         <span>Computer's Score: </span>
                     </div>
@@ -30,7 +31,7 @@
             </div>
         </main>
         <footer>
-            Frances Windsor 2024
+            Frances W 2024
         </footer>
     </div>
 </body>
